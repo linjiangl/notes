@@ -2,51 +2,30 @@
 home: true
 heroImage: /img/logo.jpg
 actionText: 快速开始 →
-actionLink: /guide/
+actionLink: /guide/php/
 features:
-  - title: 润物无声
-    details: 只做增强不做改变，引入它不会对现有工程产生影响，如丝般顺滑。
-  - title: 效率至上
-    details: 只需简单配置，即可快速进行 CRUD 操作，从而节省大量时间。
-  - title: 丰富功能
-    details: 热加载、代码生成、分页、性能分析等功能一应俱全。
-footer: Apache License 2.0 | © 2016-2018 baomidou
+  - title: 实践第一
+    details: 心中醒，口中说，纸上作，不从身上习过，皆无用也。
+  - title: 岁月无痕
+    details: 二十岁的人，意志支配一切；三十岁时，机智支配一切；四十岁时，判断支配一切。
+  - title: 学海无涯
+    details: 吾生也有涯，而知也无涯。
+footer: Apache License 2.0 | © 2019-2021 linjiangl
 ---
 
-### 当前最新版本
+### 语录
 
-```xml
-<dependency>
-    <groupId>com.baomidou</groupId>
-    <artifactId>mybatis-plus</artifactId>
-    <version>latest-version</version>
-</dependency>
-```
+<html>
+也许你想成为太阳，可你却只是一颗星辰；<br/>
+也许你想成为大树，可你却是一棵小草。<br/>
+于是，你有些自卑。<br/>
+其实，你和别人一样，也是一片风景：<br/>
+做不了太阳，就做星辰，在自己的星座发光发热；<br/>
+做不了大树，就做小草，以自己的绿色装点希望……
+</html>
 
-### 致谢
+### 思想
 
-- MyBatis-Plus 荣获[【2018 年度开源中国最受欢迎的中国软件】](https://www.oschina.net/question/2896879_2290300) TOP5，感谢各位支持者的一路同行，我们会秉承 【为简化开发而生】 这一理念继续前行！
-- 感谢 【**[huaix](https://gitee.com/youthdream)**】 捐赠的域名（[https://mybatis.plus](https://mybatis.plus)），非常的契合 MyBatis-Plus，非常感谢！
-
-### 广而告之
-
-- [【全民云计算】云主机低至 2 折](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=5wbjwd1y)
-
-<p align="center">
-Hosted by <a href="https://pages.coding.me" target="_blank" style="font-weight:bold">Coding Pages</a> & <a href="https://pages.github.com" target="_blank" style="font-weight:bold">Github Pages</a>  & <a href="http://www.jetbrains.com" target="_blank" style="font-weight:bold">Idea</a>
-</p>
-
-<script>
-export default {
-  mounted () {
-    var xmlHttp = new XMLHttpRequest()
-    xmlHttp.open("GET", "https://img.shields.io/maven-central/v/com.baomidou/mybatis-plus.json", false)
-    xmlHttp.send(null)
-    var versionInfo = JSON.parse(xmlHttp.responseText).value.replace('v', '')
-    var codeNodeList = document.querySelectorAll('code')
-    for (var i = 0; i < codeNodeList.length; i++) {
-        codeNodeList[i].innerHTML = codeNodeList[i].innerHTML.replace('latest-version', versionInfo)
-    }
-  }
-}
-</script>
+<html>
+抽象化是一种非常的不同于模糊化的东西，抽象的目的并不是为了模糊，而是为了创造出一种能让我们做到百分百精确的新语义。
+</html>
