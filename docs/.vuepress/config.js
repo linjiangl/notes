@@ -36,7 +36,45 @@ module.exports = {
         title: "Linux",
         collapsable: false,
         children: generateChildrenSidebar("/guide/linux/", [""])
-      }
+      },
+      {
+        title: "数据库",
+        sidebarDepth: 2,
+        children: [
+          {
+            title: "MySql",
+            collapsable: false,
+            children: generateChildrenSidebar("/guide/db/mysql/", ["", "general", "slow"])
+          },
+          {
+            title: "Redis",
+            collapsable: false,
+            children: generateChildrenSidebar("/guide/db/redis/", ["", "strings", "keys", "lists", "sets", "pubsub", "transaction", "example"])
+          },
+        ]
+      },
+      {
+        title: "常用工具",
+        sidebarDepth: 2,
+        children: [
+          {
+            title: "Git",
+            collapsable: false,
+            children: generateChildrenSidebar("/guide/tools/git/", ["", "command", "server", "gitlab"])
+          },
+          {
+            title: "Docker",
+            collapsable: false,
+            children: generateChildrenSidebar("/guide/tools/docker/", [""])
+          },
+          {
+            title: "Mac",
+            collapsable: false,
+            children: generateChildrenSidebar("/guide/tools/mac/", [""])
+          },
+        ]
+      },
+
     ]
   }
 };
