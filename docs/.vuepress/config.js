@@ -10,6 +10,7 @@ module.exports = {
     }
   },
   themeConfig: {
+    logo: "/img/logo.png",
     lastUpdated: "Last Updated",
     nav: [
       { text: "首页", link: "/" },
@@ -18,7 +19,6 @@ module.exports = {
     sidebar: [
       {
         title: "PHP",
-        path: "/guide/php/",
         collapsable: false,
         children: generateChildrenSidebar("/guide/php/", [
           "",
@@ -28,7 +28,6 @@ module.exports = {
       },
       {
         title: "Nginx",
-        path: "/guide/nginx/",
         collapsable: false,
         children: generateChildrenSidebar("/guide/nginx/", ["", "general"])
       }
