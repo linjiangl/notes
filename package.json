@@ -1,23 +1,31 @@
 {
-  "name": "nodes",
+  "name": "notes",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web development notes",
+  "main": "index.js",
   "scripts": {
-    "start": "docsify start .",
-    "deploy": "now -p"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linjiangl/notes.git"
+  },
+  "keywords": [
+    "linux",
+    "nginx",
+    "mysql",
+    "php",
+    "vue",
+    "git"
+  ],
+  "author": "linjiangl",
   "license": "ISC",
-  "devDependencies": {
-    "docsify-cli": "^4.3.0",
-    "now": "^16.4.4"
+  "bugs": {
+    "url": "https://github.com/linjiangl/notes/issues"
   },
-  "docsify": {
-    "config": {
-      "basePath": "https://docsify.js.org/",
-      "loadSidebar": true,
-      "loadNavbar": true
-    }
+  "homepage": "https://github.com/linjiangl/notes#readme",
+  "devDependencies": {
+    "vuepress": "^1.2.0"
   }
 }
