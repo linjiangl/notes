@@ -23,13 +23,19 @@ module.exports = {
         children: generateChildrenSidebar("/guide/php/", [
           "",
           "general",
-          "install"
+          "setting",
+          "design"
         ])
       },
       {
         title: "Nginx",
         collapsable: false,
-        children: generateChildrenSidebar("/guide/nginx/", ["", "general"])
+        children: generateChildrenSidebar("/guide/nginx/", ["", "question"])
+      },
+      {
+        title: "Linux",
+        collapsable: false,
+        children: generateChildrenSidebar("/guide/linux/", [""])
       }
     ]
   }
