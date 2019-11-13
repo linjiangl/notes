@@ -24,6 +24,7 @@ module.exports = {
           "",
           "general",
           "setting",
+          "cs_fixer",
           "design"
         ])
       },
