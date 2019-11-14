@@ -69,6 +69,11 @@ module.exports = {
             children: generateChildrenSidebar("/guide/tools/docker/", [""])
           },
           {
+            title: "Tmux",
+            collapsable: false,
+            children: generateChildrenSidebar("/guide/tools/tmux/", [""])
+          },
+          {
             title: "Mac",
             collapsable: false,
             children: generateChildrenSidebar("/guide/tools/mac/", [""])
