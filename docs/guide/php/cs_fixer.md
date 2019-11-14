@@ -1,7 +1,7 @@
-# PhpCsFixer 格式化代码
+# 格式化代码
 
 
-> 使用说明
+> php-cs-fixer 使用说明
 
 基于 php-cs-fixer 插件，请先使用composer安装此插件
 

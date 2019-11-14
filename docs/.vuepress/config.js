@@ -2,7 +2,7 @@ module.exports = {
   title: "逗比笔记",
   description: "Web development notes",
   ga: "UA-85414008-1",
-  base: "notes",
+  base: "/notes/",
   markdown: {
     externalLinks: {
       target: "_blank",
