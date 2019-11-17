@@ -1,5 +1,5 @@
 module.exports = {
-  title: "逗比笔记",
+  title: "开发笔记",
   description: "Web development notes",
   ga: "UA-85414008-1",
   base: "/notes/",
