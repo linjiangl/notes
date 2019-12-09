@@ -61,7 +61,7 @@ module.exports = {
           {
             title: "Git",
             collapsable: false,
-            children: generateChildrenSidebar("/guide/tools/git/", ["", "command", "server", "gitlab"])
+            children: generateChildrenSidebar("/guide/tools/git/", ["", "command", "branch", "gitlab"])
           },
           {
             title: "Docker",
