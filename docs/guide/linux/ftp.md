@@ -1,4 +1,4 @@
-# ftp服务
+# FTP服务
 
 [vsftpd](https://blog.csdn.net/aiynmimi/article/details/77012507)
 
