@@ -33,3 +33,13 @@ Absolute path on the Server: 项目路径
 > chrome 插件
 
 Google 商店搜索 `Xdebug helper`, 找到并安装
+
+
+> [windows下换行符(LF)](https://blog.51cto.com/cafeim/2476379?source=dra)
+
+``` 
+# 第一步: GIT配置
+$ git config --global core.autocrlf input
+# 第二步: 克隆项目
+$ git clone git@xx.com
+```
