@@ -99,3 +99,49 @@ Hi linjiangl! You've successfully authenticated, but GitHub does not provide she
 # 刷新dns
 sudo dscacheutil -flushcache
 ```
+
+### 7. 配置
+
+> Git命令行修改AutoCRLF
+
+```shell script
+# 提交时转换为LF，检出时转换为CRLF（推荐windows）
+$ git config --global core.autocrlf true
+
+# 提交时转换为LF，检出时不转换（推荐*unix/mac）
+$ git config --global core.autocrlf input
+
+# 提交检出均不转换
+$ git config --global core.autocrlf false
+```
+
+>  Git命令行修改SafeCRLF
+
+```shell script
+# 拒绝提交包含混合换行符的文件
+$ git config --global core.safecrlf true
+
+# 允许提交包含混合换行符的文件
+$ git config --global core.safecrlf false
+
+# 提交包含混合换行符的文件时给出警告
+$ git config --global core.safecrlf warn
+```
+
+> 忽略文件属性修改
+
+```shell script
+# 全局
+$ git config --global core.fileMode false
+# 当前
+$ git config core.fileMode false
+```
+
+### 8. 初始化仓库
+
+```shell script
+$ git init
+$ git remote add origin git@gitee.com:linlingl/cms.git
+$ git pull
+$ git push --set-upstream origin master
+```

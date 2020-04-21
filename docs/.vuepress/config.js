@@ -18,6 +18,11 @@ module.exports = {
     ],
     sidebar: [
       {
+        title: "GIT",
+        collapsable: false,
+        children: generateChildrenSidebar("/guide/git/", ["", "branch", "command"])
+      },
+      {
         title: "PHP",
         collapsable: false,
         children: generateChildrenSidebar("/guide/php/", [
@@ -36,7 +41,7 @@ module.exports = {
       {
         title: "Linux",
         collapsable: false,
-        children: generateChildrenSidebar("/guide/linux/", ["", "login", "ftp", "jira", "jenkins"])
+        children: generateChildrenSidebar("/guide/linux/", ["", "login", "ftp", "jira"])
       },
       {
         title: "数据库",
@@ -58,21 +63,6 @@ module.exports = {
         title: "常用工具",
         sidebarDepth: 2,
         children: [
-          {
-            title: "Git",
-            collapsable: false,
-            children: generateChildrenSidebar("/guide/tools/git/", ["", "command", "branch", "gitlab"])
-          },
-          {
-            title: "Docker",
-            collapsable: false,
-            children: generateChildrenSidebar("/guide/tools/docker/", [""])
-          },
-          {
-            title: "Tmux",
-            collapsable: false,
-            children: generateChildrenSidebar("/guide/tools/tmux/", [""])
-          },
           {
             title: "Mac",
             collapsable: false,

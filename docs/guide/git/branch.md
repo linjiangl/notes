@@ -19,11 +19,9 @@ $ git branch <name>
 
 # 切换分支
 $ git checkout <name>
-$ git switch <name>
 
 # 创建+切换分支
 $ git checkout -b <name>
-$ git switch -c <name>
 
 # 基于远程分支创建一个本地分支
 $ git checkout -b <name> origin/<name>
