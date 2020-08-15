@@ -2,6 +2,8 @@
 
 ## windows wsl 
 
+[参考](https://www.jianshu.com/p/a20c2d58eaac)
+
 > 安装windows子系统, 设置默认root登录
 
 ```shell script
@@ -10,7 +12,7 @@ $ cd %HOMEPATH%\AppData\Local\Microsoft\WindowsApps
 $ dir
 
 # 进入子系统目录, 设置默认root登录
-$ cd CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc
+$ cd CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc
 $ ubuntu1804.exe config --default-user root
 ```
 
@@ -19,20 +21,28 @@ $ ubuntu1804.exe config --default-user root
 [Ubuntu镜像源](https://developer.aliyun.com/mirror/ubuntu?spm=a2c6h.13651102.0.0.3e221b11SqS4AM)
 
 ```shell script
+# 更换Ubuntu 镜像
+$ sudo sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+$ sudo apt-get update
+$ sudo apt-get upgrade -y
+
 # 更新软件包索引，并且安装必要的依赖软件，来添加一个新的 HTTPS 软件源：
-$ sudo apt update
-$ sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+$ sudo apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 
 # 添加 GPG 密钥，并添加 Docker-ce 软件源
 $ curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
 $ sudo add-apt-repository "deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/ubuntu/ $(lsb_release -cs) stable"
-$ sudo apt update
+$ sudo apt-get update
 
 # 列出 Docker 软件源中所有可用的版本
-$ apt list -a docker-ce
+$ apt-get list -a docker-ce
 
 # 通过在软件包名后面添加版本=<VERSION>来安装指定版本
-$ sudo apt install docker-ce=<VERSION> docker-ce-cli=<VERSION> containerd.io
+$ sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+
+# 启动
+$ sudo systemctl enable docker
+$ sudo systemctl start docker
 
 # 验证docker是否安装成功
 $ sudo systemctl status docker
@@ -43,13 +53,18 @@ $ sudo apt-mark hold docker-ce
 # 以非 Root 用户身份执行 Docker
 $ sudo usermod -aG docker $USER
 
-# 卸载 Docker
-$ docker container stop $(docker container ls -aq)
-$ docker system prune -a --volumes
-$ sudo apt purge docker-ce
-$ sudo apt autoremove
 ```
 
 > 安装PHP开发环境
 
 [参考](https://github.com/linjiangl/docker-web-server)
+
+
+> 卸载子系统
+
+```shell script
+$ wslconfig /l
+$ wslconfig /u Ubuntu-20.04
+
+# 打开开始菜单，右键卸载掉
+```
