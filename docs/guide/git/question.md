@@ -1,6 +1,6 @@
-# GIT 日志乱码问题
+# 常见问题
 
-> 解决方法:
+> IDE命令工具设置成git bash时, git log 乱码:
 
 找到C:\Program Files\Git\etc\bash.bashrc文件, 打开在末尾加上:
 

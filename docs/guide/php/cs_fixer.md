@@ -1,4 +1,4 @@
-# 格式化代码
+# PHP-CS-FIXER 配置
 
 
 > php-cs-fixer 使用说明

@@ -20,7 +20,7 @@ module.exports = {
       {
         title: "GIT",
         collapsable: false,
-        children: generateChildrenSidebar("/guide/git/", ["", "branch", "command"])
+        children: generateChildrenSidebar("/guide/git/", ["", "branch", "command", "question"])
       },
       {
         title: "PHP",
@@ -28,9 +28,10 @@ module.exports = {
         children: generateChildrenSidebar("/guide/php/", [
           "",
           "general",
+          "develop",
           "setting",
           "cs_fixer",
-          "design"
+          "design",
         ])
       },
       {
@@ -41,7 +42,7 @@ module.exports = {
       {
         title: "Linux",
         collapsable: false,
-        children: generateChildrenSidebar("/guide/linux/", ["", "login", "ftp", "jira", "develop"])
+        children: generateChildrenSidebar("/guide/linux/", ["", "login", "ftp", "jira"])
       },
       {
         title: "数据库",
