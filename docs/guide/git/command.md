@@ -33,3 +33,17 @@ $ git diff acbf2c464 233054820 --name-only
 ```shell script
 $ git diff acbf2c464 233054820 --name-only | xargs zip /tmp/diff.zip
 ```
+
+> 用于临时保存和回复修改 [`stash`](https://git-scm.com/docs/git-stash)
+
+```shell script
+# 暂时存储修改的文件
+$ git stash
+
+# 查看存储区
+$ git stash list
+
+# 恢复暂存文件
+$ git stash pop
+```
+
