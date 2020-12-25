@@ -69,6 +69,11 @@ module.exports = {
             collapsable: false,
             children: generateChildrenSidebar("/guide/tools/mac/", [""])
           },
+          {
+            title: "VSCode",
+            collapsable: false,
+            children: generateChildrenSidebar("/guide/tools/vscode/", ["", "extensions"])
+          },
         ]
       },
 
