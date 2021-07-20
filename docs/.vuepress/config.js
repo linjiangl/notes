@@ -74,6 +74,11 @@ module.exports = {
             collapsable: false,
             children: generateChildrenSidebar("/guide/tools/vscode/", ["", "extensions"])
           },
+          {
+            title: "WSL",
+            collapsable: false,
+            children: generateChildrenSidebar("/guide/tools/wsl/", [""])
+          },
         ]
       },
 
