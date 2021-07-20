@@ -1,6 +1,6 @@
 # WSL配置局域网访问
 
-> 查看wsl内网地址
+> 查看wsl内网地址，子系统终端执行如下命令：
 
 ```shell
 $ ip addr show eth0
@@ -8,7 +8,7 @@ $ ip addr show eth0
 
 > 设置端口转发
 
-`connectaddress：`为wsl内网地址
+`connectaddress：`为wsl内网地址，cmd执行如下命令：
 
 ```shell
 $ netsh interface portproxy add v4tov4 listenport=9000 listenaddress=* connectport=9000 connectaddress=172.17.77.126 protocol=tcp
