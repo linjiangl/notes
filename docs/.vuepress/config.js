@@ -62,7 +62,7 @@ module.exports = {
       },
       {
         title: "常用工具",
-        sidebarDepth: 2,
+        sidebarDepth: 3,
         children: [
           {
             title: "Mac",
