@@ -1,6 +1,6 @@
 # WSL配置局域网访问
 
-> wsl重启或启动IP就会发生改变，需要手动指定IP：
+> windows重启或启动wsl IP就会发生改变，需要手动指定wsl IP：
 
 ```shell
 # Powershell 
