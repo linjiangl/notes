@@ -1,6 +1,6 @@
 # WSL配置局域网访问
 
-> wsl IP启动机器就会改变，手动指定的IP：
+> wsl重启或启动IP就会发生改变，需要手动指定IP：
 
 ```shell
 # Powershell 
@@ -15,7 +15,7 @@ $ wsl -d Ubuntu-20.04 -u root ip addr add 172.17.17.232/28 broadcast 172.17.17.2
 ```
 
 ```shell
-# Powershell 终端
+# Ubuntu 终端
 $ ip addr show eth0
 5: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
     link/ether 00:15:5d:cd:45:4a brd ff:ff:ff:ff:ff:ff
@@ -32,7 +32,7 @@ $ ip addr show eth0
 `connect*：`wsl参数，`listen*：`宿主机参数
 
 ```shell
-# Powershell 终端
+# Powershell 
 $ netsh interface portproxy add v4tov4 listenport=9000 listenaddress=* connectport=9000 connectaddress=172.17.17.232 protocol=tcp
 
 $ netsh interface portproxy show all
@@ -47,6 +47,7 @@ $ netsh interface portproxy show all
 > 删除端口转发
 
 ```shell
+# Powershell 
 $ netsh interface portproxy delete v4tov4 listenport=9000 listenaddress=*
 ```
 
