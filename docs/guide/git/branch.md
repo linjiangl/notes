@@ -52,6 +52,12 @@ $ git branch -d <name>
 
 # 远程分支
 $ git push origin -d <name>
+
+# 获取远端分支信息
+$ git remote show origin
+
+# 同步远程的分支到本地，远程分支删除，本地分支还显示，可以执行此命令
+$ git remote prune origin
 ```
 
 ## 合并
