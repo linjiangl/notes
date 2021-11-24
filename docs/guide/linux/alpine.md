@@ -17,7 +17,7 @@ $ sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 ```shell
 # pecl 安装
-$ curl -o go-pear.php http://pear.php.net/go-pear.phar
+$ wget http://pear.php.net/go-pear.phar
 $ php go-pear.php
 
 ```
@@ -29,7 +29,7 @@ $ php go-pear.php
 $ apk add $PHPIZE_DEPS php8-dev boost boost-dev
 
 # 下载项目
-$  wget https://github.com/swoole/yasd/archive/refs/tags/v0.3.9.tar.gz
+$ wget https://github.com/swoole/yasd/archive/refs/tags/v0.3.9.tar.gz
 
 # 编译安装
 $ tar -zxvf v0.3.9.tar.gz
