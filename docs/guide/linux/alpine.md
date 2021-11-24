@@ -13,6 +13,15 @@ $ sed -i 's/https/http/' /etc/apk/repositories
 $ sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 ```
 
+#### PHP 依赖
+
+```shell
+# pecl 安装
+$ curl -o go-pear.php http://pear.php.net/go-pear.phar
+$ php go-pear.php
+
+```
+
 #### yasd 安装
 
 ```shell
