@@ -1,6 +1,6 @@
 module.exports = {
-  title: "开发笔记",
-  description: "Web development notes",
+  title: "小白手册",
+  description: "new developer notes",
   ga: "UA-85414008-1",
   base: "/notes/",
   markdown: {
