@@ -18,7 +18,7 @@ $ sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 ```shell
 # pecl 安装
 $ wget http://pear.php.net/go-pear.phar
-$ php go-pear.php
+$ php go-pear.phar
 
 ```
 
