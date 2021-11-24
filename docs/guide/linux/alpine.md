@@ -20,6 +20,14 @@ $ sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 $ wget http://pear.php.net/go-pear.phar
 $ php go-pear.phar
 
+# 安装不维护的依赖, 如：pdo_dblib
+$ apk search pdo_dblib
+php7-pdo_dblib-7.4.26-r0
+php8-pdo_dblib-8.0.13-r0
+# 自动安装
+$ apk add php7-pdo_dblib
+# 指定版本安装
+$ apk add php7-pdo_dblib=7.4.26-r0
 ```
 
 #### yasd 安装
