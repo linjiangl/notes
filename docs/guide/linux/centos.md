@@ -1,4 +1,4 @@
-# centos
+# CentOS
 
 ## 查看系统信息
 

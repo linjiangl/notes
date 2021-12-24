@@ -1,4 +1,4 @@
-# tmux
+# Tmux
 
 ### tmux 命令
 
