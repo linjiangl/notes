@@ -42,7 +42,7 @@ module.exports = {
       {
         title: "Linux",
         collapsable: false,
-        children: generateChildrenSidebar("/guide/linux/", ["", "CentOS", 'Alpine', 'Tmux'])
+        children: generateChildrenSidebar("/guide/linux/", ["", "centos", 'alpine', 'tmux'])
       },
       {
         title: "数据库",
