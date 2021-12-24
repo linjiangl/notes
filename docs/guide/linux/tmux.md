@@ -41,7 +41,7 @@ $ tmux kill-session [-t 会话名]
 	    <td>进入命令行模式</td>
 	</tr>
 	<tr >
-	    <td rowspan="1">常用命令</td>
+	    <td rowspan="1">常用配置</td>
 	    <td>set -g mouse on</td>
 	    <td>开启鼠标模式</td>
 	</tr>
