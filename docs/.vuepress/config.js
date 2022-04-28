@@ -65,9 +65,9 @@ module.exports = {
         sidebarDepth: 3,
         children: [
           {
-            title: "Mac",
+            title: "WSL",
             collapsable: false,
-            children: generateChildrenSidebar("/guide/tools/mac/", [""])
+            children: generateChildrenSidebar("/guide/tools/wsl/", [""])
           },
           {
             title: "VSCode",
@@ -75,10 +75,15 @@ module.exports = {
             children: generateChildrenSidebar("/guide/tools/vscode/", ["", "extensions"])
           },
           {
-            title: "WSL",
+            title: "Sublime Text",
             collapsable: false,
-            children: generateChildrenSidebar("/guide/tools/wsl/", [""])
+            children: generateChildrenSidebar("/guide/tools/sublime/", [""])
           },
+          {
+            title: "Mac",
+            collapsable: false,
+            children: generateChildrenSidebar("/guide/tools/mac/", [""])
+          }
         ]
       },
 
