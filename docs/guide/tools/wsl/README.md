@@ -1,4 +1,25 @@
-# WSL配置局域网访问
+# WSL 配置
+
+## 常用配置
+
+> 安装windows子系统, 设置默认root登录
+
+```shell script
+# cmd 进入Apps目录,列出目录,找到ubuntu子系统目录(CanonicalGroupLimited开头的目录)
+$ cd %HOMEPATH%\AppData\Local\Microsoft\WindowsApps
+$ dir
+
+# 进入子系统目录, 设置默认root登录
+$ cd CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc
+$ ubuntu1804.exe config --default-user root
+```
+
+> WSL无法启动
+
+可是使用管理员模式运行Power Shell或CMD并输入: `netsh winsock reset` 执行后重启电脑解决。
+
+
+## 局域网配置访问
 
 > 设置端口转发
 
