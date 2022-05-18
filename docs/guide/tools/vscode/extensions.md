@@ -40,5 +40,6 @@
 
 > vue
 
-1. Vetur
+1. vetur
+2. vue-helper
 
