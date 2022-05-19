@@ -43,3 +43,7 @@
 1. vetur
 2. vue-helper
 
+> vue3 
+1. Vue Language Features
+2. Vue 3 Snippets
+
