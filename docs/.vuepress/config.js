@@ -20,7 +20,7 @@ module.exports = {
       {
         title: "GIT",
         collapsable: false,
-        children: generateChildrenSidebar("/guide/git/", ["", "branch", "command", "question"])
+        children: generateChildrenSidebar("/guide/git/", ["", "branch", "commit", "command", "question"])
       },
       {
         title: "PHP",
