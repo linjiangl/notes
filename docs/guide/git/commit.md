@@ -1,4 +1,4 @@
-# Commit message 的格式
+# 提交规范
 
 每次提交，Commit message 都包括三个部分：Header，Body 和 Footer。
 
