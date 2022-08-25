@@ -13,7 +13,7 @@ $ dir
 
 # 进入子系统目录, 设置默认root登录
 $ cd CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc
-$ ubuntu1804.exe config --default-user root
+$ ubuntu2004.exe config --default-user root
 ```
 
 > `ubuntu`安装`docker`环境
