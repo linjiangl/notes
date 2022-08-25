@@ -47,12 +47,12 @@ $ ubuntu2004 config --default-user root
 > Docker Desktop 移出系统盘
 
 默认情况下，Docker Desktop for Window会创建如下两个发行版（distro）：
-- docker-desktop：用于存放程序
-- docker-desktop-data：用于存放镜像
+- `docker-desktop`：用于存放程序;
+- `docker-desktop-data`：用于存放镜像;
 
 访问`%LOCALAPPDATA%/Docker/wsl`目录，就可以看到两个文件夹：
-- 'data/ext4.vhdx'被docker-desktop-data 发行版使用;
-- 'distro/ext4.vhdx'被 docker-desktop 发行版使用;
+- `data/ext4.vhdx`被 `docker-desktop-data` 发行版使用;
+- `distro/ext4.vhdx`被 `docker-desktop` 发行版使用;
 
 ```shell
 # 删除所有容器和镜像
