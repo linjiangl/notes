@@ -1,40 +1,47 @@
-# 配置
+# 常用插件
 
-```
-{
-  "files.associations": {
-    "*.cjson": "jsonc",
-    "*.wxss": "css",
-    "*.wxs": "javascript"
-  },
-  "emmet.includeLanguages": {
-    "wxml": "html"
-  },
-  "minapp-vscode.disableAutoConfig": true,
-  // 格式化代码，插件Prettier - Code formatter
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  // 搜索排除
-  "search.exclude": {
-    "**/.history": true,
-    "**/public": true,
-    "**/dist": true,
-    "**/mock": true
-  },
-  // 设置默认终端
-  "terminal.integrated.defaultProfile.windows": "Git Bash"
-}
+> 工具
 
-```
+* EditorConfig for VS Code
+* ESLint
+* Local History
+* Remote - WSL
+* Todo Tree
+* Docker
+
+
+
+> git
+
+* GitLens — Git supercharged
+* Git History Diff
+
+
+
+> 调试
+
+* open in browser
+* Debugger for Chrome
+
+
+
+> 格式化代码
+
+* Prettier - Code formatter
+
+
+
+> react
+
+* Simple React Snippets
+* Typescript React code snippets
+
+
+> vue
+
+* vetur
+* vue-helper
+
+> vue3
+* Vue Language Features
+* Vue 3 Snippets

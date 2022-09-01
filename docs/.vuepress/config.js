@@ -72,7 +72,7 @@ module.exports = {
           {
             title: "VSCode",
             collapsable: false,
-            children: generateChildrenSidebar("/guide/tools/vscode/", ["", "extensions"])
+            children: generateChildrenSidebar("/guide/tools/vscode/", ["", "format"])
           },
           {
             title: "Sublime Text",
