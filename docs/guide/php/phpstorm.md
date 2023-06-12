@@ -42,8 +42,8 @@
 桌面->phpstrom 图标->右击->打开文件所在位置，对应目录下面找到 `phpstorm64.exe.vmoptions` 文件
 
 > macOS or Linux
-> 
-> 在 `phpstorm64.exe.vmoptions` 文件中配置：
+
+在 `phpstorm64.exe.vmoptions` 文件中配置：
 
 ``` 
 -Xms128m
