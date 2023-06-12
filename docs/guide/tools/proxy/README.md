@@ -34,6 +34,36 @@ $ sysctl net.ipv4.tcp_congestion_control
 
 ```
 
+> ssr 使用 `user-rule.txt`
+
+1. 更新PAC为GFWList
+2. `user-rule.txt` 规则如下：
+```bash
+! Put user rules line by line in this file.
+! See https://adblockplus.org/en/filter-cheatsheet
+
+||github.com
+||*.github.com
+||docker.com
+||*.docker.com
+||discord.com
+||*.discord.com
+||openai.com
+||*.openai.com
+||ant.design
+||*.ant.design
+||civitai.com
+||*.civitai.com
+||unsplash.com
+||*.unsplash.com
+||pexels.com
+||*.pexels.com
+||q1travel.cloud
+||*.q1travel.cloud
+
+
+
+```
 
 
 
@@ -55,3 +85,4 @@ $ bash <(curl -s -L https://git.io/v2ray.sh)
 - [Android](https://github.com/2dust/v2rayNG/releases)
 
 - [Ios]()
+
