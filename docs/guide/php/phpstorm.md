@@ -72,10 +72,17 @@
 -javaagent:/home/jetbra/ja-netfilter.jar=jetbrains
 ```
 
-## 3. 执行安装命令
+## 3. 安装
 
 ```
 macOS or Linux: execute "scripts/install.sh"
 Windows: double click to execute "scripts\install-current-user.vbs" (For current user)
                                  "scripts\install-all-users.vbs" (For all users)
 ```
+
+## 4. 激活
+
+复制Key粘贴到 `Activation Code`, 点击 `Activate` 激活
+
+![jetbra](/notes/img/jetbra-copy.png)
+![jetbra](/notes/img/jetbra-code.png)
