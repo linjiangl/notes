@@ -37,7 +37,7 @@
 -javaagent:D:\jetbra\ja-netfilter.jar=jetbrains
 ```
 
-**备注：**
+**`phpstorm64.exe.vmoptions` 文件位置：**
 
 桌面->phpstrom 图标->右击->打开文件所在位置，对应目录下面找到 `phpstorm64.exe.vmoptions` 文件
 
