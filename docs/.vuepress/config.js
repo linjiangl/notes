@@ -70,6 +70,11 @@ module.exports = {
             children: generateChildrenSidebar("/guide/tools/wsl/", [""])
           },
           {
+            title: "Office",
+            collapsable: false,
+            children: generateChildrenSidebar("/guide/tools/office/", [""])
+          },
+          {
             title: "VSCode",
             collapsable: false,
             children: generateChildrenSidebar("/guide/tools/vscode/", ["", "format"])
