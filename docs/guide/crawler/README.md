@@ -10,9 +10,16 @@
 
 ### 安装及配置
 
-> 默认以上工具已安装，并配置完成。
+> `Charles`权限配置
 
-> 模拟器安装证书：
+文件位置 `C:\ProgramData\BlueStacks_nxt\bluestacks.conf`
+
+```
+bst.feature.rooting="0" => bst.feature.rooting="1"
+bst.instance.Nougat64.enable_root_access="0" => bst.instance.Nougat64.enable_root_access="1"
+```
+
+> `BlueStacks`安装证书
 
 ```shell
 # 1. 准备证书
@@ -42,7 +49,7 @@ $ mv 7e8692e6.0 /system/etc/security/cacerts/
 
 ```
 
-> 模拟器使用`Charles`代理：
+> `BlueStacks`使用`Charles`代理：
 
 ```bash
 # 设置代理
