@@ -42,6 +42,7 @@ $ adb root
 $ adb push D:\software\7e8692e6.0 /data/loacl/tmp
 $ adb shell
 $ su
+$ mount -o rw,remount /system
 $ cd /data/loacl/tmp
 $ chown system:system 7e8692e6.0
 $ chmod 664 7e8692e6.0
