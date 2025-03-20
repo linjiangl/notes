@@ -33,7 +33,7 @@ $ sudo apt-get -y install apt-transport-https ca-certificates curl gnupg-agent s
 
 > 安装PHP开发环境
 
-[参考](https://github.com/linjiangl/docker-web-server)
+[参考](https://github.com/linjiangl/dcde)
 
 
 > 卸载子系统

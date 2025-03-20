@@ -2,15 +2,18 @@
 
 ## xdebug
 
-> xdebug.ini
+> php.ini XDebug 3 配置
 
 ```
-xdebug.default_enable=1
-xdebug.remote_enable=1
-;xdebug.remote_autostart=1
-xdebug.remote_host=192.168.1.130
-xdebug.remote_port=19000
-xdebug.idekey="PHPSTORM"
+[XDebug]
+xdebug.mode=debug
+
+; Set to host.docker.internal on Mac and Windows, otherwise, set to host real ip
+xdebug.client_host = host.docker.internal
+xdebug.client_port = 9000
+xdebug.start_with_request = yes
+xdebug.log=/dev/stdout
+xdebug.log_level=0
 ```
 
 > phpstorm 配置
@@ -18,16 +21,17 @@ xdebug.idekey="PHPSTORM"
 - Languages & Frameworkes > PHP > Debug
 
 ```
-Xdebug => Debug port: [19000]
+Xdebug => Debug port: [9000] 注意：Docker容器的端口
 ```
 
 - Languages & Frameworkes > PHP > Services, 新增服务
 
 ```
-Name: 项目名称
-Host: 项目域名
+Name: 项目名称, 如：localhost
+Host: 项目域名, 如：localhost, mall.com, api.mall.com
+Port: 项目端口, 如：80
 Use path mappings: 勾选
-Absolute path on the Server: 项目路径
+Absolute path on the Server: 项目路径 如：/www/localhost, /www/laravel/public
 ```
 
 > chrome 插件
