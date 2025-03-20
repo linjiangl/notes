@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/linjiangl/notes#readme",
   "devDependencies": {
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.9.0"
   },
   "dependencies": {
-    "@vuepress/plugin-search": "^1.0.0-rc.1"
+    "@vuepress/plugin-search": "^1.9.0"
   }
 }
