@@ -31,7 +31,7 @@ Name: 项目名称, 如：localhost
 Host: 项目域名, 如：localhost, mall.com, api.mall.com
 Port: 项目端口, 如：80
 Use path mappings: 勾选
-Absolute path on the Server: 项目路径 如：/www/localhost, /www/laravel/public
+Absolute path on the Server: 项目路径 如：/www/localhost, /www/laravel
 ```
 
 > chrome 插件
