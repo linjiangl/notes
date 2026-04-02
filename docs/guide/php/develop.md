@@ -36,9 +36,41 @@ $ sudo apt-get -y install apt-transport-https ca-certificates curl gnupg-agent s
 [参考](https://github.com/linjiangl/dcde)
 
 
-> 卸载子系统
+> wsl2
 
 ```shell script
+# 配置文件 .wslconfig
+
+# Settings apply across all Linux distros running on WSL 2
+[wsl2]
+processors=4
+networkingMode=mirrored
+firewall=false
+
+# Limits VM memory to use no more than 4 GB, this can be set as whole numbers using GB or MB
+memory=8GB
+
+# Sets amount of swap storage space to 8GB, default is 25% of available RAM
+swap=2GB
+
+[experimental]
+autoProxy=false
+dnsTunneling=true
+sparseVhd=true
+
+# 卸载子系统
 $ wslconfig /l
 $ wslconfig /u Ubuntu-20.04
+```
+
+> clash-verge-rev
+
+```shell script
+# 全局扩展覆写配置
+# Profile Enhancement Merge Template for Clash Verge
+
+profile:
+  store-selected: true
+dns:
+  use-system-hosts: true
 ```
