@@ -1,0 +1,30 @@
+import{_ as a,o as n,c as p,ak as l}from"./chunks/framework.BQh-lcRV.js";const y=JSON.parse('{"title":"安装配置","description":"","frontmatter":{},"headers":[],"relativePath":"guide/db/mysql/index.md","filePath":"guide/db/mysql/index.md","lastUpdated":1775392610000}'),e={name:"guide/db/mysql/index.md"};function i(t,s,c,r,m,o){return n(),p("div",null,[...s[0]||(s[0]=[l(`<h1 id="安装配置" tabindex="-1">安装配置 <a class="header-anchor" href="#安装配置" aria-label="Permalink to “安装配置”">​</a></h1><h3 id="安装mysql-8-0" tabindex="-1">安装mysql 8.0 <a class="header-anchor" href="#安装mysql-8-0" aria-label="Permalink to “安装mysql 8.0”">​</a></h3><p><a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noreferrer">rpm</a></p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>// 下载源</span></span>
+<span class="line"><span>$ wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 设置源</span></span>
+<span class="line"><span>$ rpm -ivh mysql80-community-release-el7-3.noarch.rpm</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 查看源</span></span>
+<span class="line"><span>$ yum repolist all | grep mysql</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 编辑 mysql repo文件</span></span>
+<span class="line"><span>$ vim /etc/yum.repos.d/mysql-community.repo </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 安装</span></span>
+<span class="line"><span>$ yum install mysql-community-server</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 启动</span></span>
+<span class="line"><span>$ systemctl start mysqld.service</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 查看mysql的初始密码</span></span>
+<span class="line"><span>$ cat /var/log/mysqld.log | grep password</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 重置mysql的密码</span></span>
+<span class="line"><span>$ mysql -u root -p</span></span>
+<span class="line"><span>$ ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;-A*&amp;nmrZ#5CQ&#39;;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 刷新</span></span>
+<span class="line"><span>$ FLUSH PRIVILEGES;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 开机启动</span></span>
+<span class="line"><span>$ systemctl enable mysqld.service</span></span></code></pre></div>`,4)])])}const h=a(e,[["render",i]]);export{y as __pageData,h as default};

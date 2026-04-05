@@ -1,0 +1,20 @@
+import{_ as a,o as p,c as n,ak as e}from"./chunks/framework.BQh-lcRV.js";const b=JSON.parse('{"title":"安装配置","description":"","frontmatter":{},"headers":[],"relativePath":"guide/php/index.md","filePath":"guide/php/index.md","lastUpdated":1775392610000}'),i={name:"guide/php/index.md"};function l(t,s,h,c,r,o){return p(),n("div",null,[...s[0]||(s[0]=[e(`<h1 id="安装配置" tabindex="-1">安装配置 <a class="header-anchor" href="#安装配置" aria-label="Permalink to “安装配置”">​</a></h1><h2 id="安装" tabindex="-1">安装 <a class="header-anchor" href="#安装" aria-label="Permalink to “安装”">​</a></h2><p>Centos 7.x 下安装 PHP, <a href="https://www.php.net/downloads.php" target="_blank" rel="noreferrer">官网</a></p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>// 1. 下载二进制文件</span></span>
+<span class="line"><span>$ wget https://www.php.net/distributions/php-7.3.11.tar.gz</span></span>
+<span class="line"><span>$ tar -zxvf php-7.3.11.tar.gz</span></span>
+<span class="line"><span>$ cd php-7.3.11</span></span>
+<span class="line"><span>$ ./configure --prefix=/usr/local/php/php-7.3.11 --with-fpm-user=nginx --with-fpm-group=nginx --with-curl --with-freetype-dir --with-gd --with-gettext --with-iconv-dir --with-kerberos --with-libdir=lib64 --with-libxml-dir --with-mysqli --with-openssl --with-pcre-regex --with-pdo-mysql --with-pdo-sqlite --with-pear --with-png-dir --with-jpeg-dir --with-xmlrpc --with-xsl --with-zlib --with-bz2 --with-mhash --enable-fpm --enable-bcmath --enable-libxml --enable-inline-optimization --enable-mbregex --enable-mbstring --enable-opcache --enable-pcntl --enable-shmop --enable-soap --enable-sockets --enable-sysvsem --enable-sysvshm --enable-xml</span></span>
+<span class="line"><span>$ make &amp;&amp; make install</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 2. 配置文件</span></span>
+<span class="line"><span>$ cp php.ini-production /usr/local/php/php-7.3.11/lib/php.ini</span></span>
+<span class="line"><span>$ cp sapi/fpm/php-fpm.conf /usr/local/php/php-7.3.11/etc/php-fpm.conf</span></span>
+<span class="line"><span>$ cp sapi/fpm/www.conf /usr/local/php/php-7.3.11/etc/php-fpm.d/www.conf</span></span>
+<span class="line"><span>$ cp sapi/fpm/php-fpm.service /lib/systemd/system/php-fpm.service</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 3. 启动服务</span></span>
+<span class="line"><span>$ systemctl start php-fpm</span></span></code></pre></div><h2 id="pecl-安装扩展" tabindex="-1">PECL 安装扩展 <a class="header-anchor" href="#pecl-安装扩展" aria-label="Permalink to “PECL 安装扩展”">​</a></h2><blockquote><p>编译</p></blockquote><ul><li>到<a href="https://pecl.php.net/" target="_blank" rel="noreferrer"><code>pecl.php.net</code></a>搜索 redis</li><li>下载 stable 版扩展</li><li>解压文件, 并进入目录, 执行 <code>/usr/local/php/bin/phpize</code> (作用是检测 PHP 的内核版本,并为扩展生成相应的编译配置)</li><li>配置 <code>configure --with-php-config=/usr/local/php/bin/php-config</code></li><li>安装 <code>make &amp;&amp; make install</code></li></ul><blockquote><p>引入编译出的 redis.so 插件</p></blockquote><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>vim /usr/local/etc/php/7.2/conf.d/ext-redis.ini</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[redis]</span></span>
+<span class="line"><span>extension=&quot;/usr/local/opt/php72-redis/redis.so&quot;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 重启php</span></span></code></pre></div>`,9)])])}const m=a(i,[["render",l]]);export{b as __pageData,m as default};

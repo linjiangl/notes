@@ -1,0 +1,69 @@
+import{_ as n,o as a,c as p,ak as i}from"./chunks/framework.BQh-lcRV.js";const d=JSON.parse('{"title":"在服务器上搭建 Git","description":"","frontmatter":{},"headers":[],"relativePath":"guide/git/server.md","filePath":"guide/git/server.md","lastUpdated":1587438508000}'),l={name:"guide/git/server.md"};function e(t,s,c,o,r,g){return a(),p("div",null,[...s[0]||(s[0]=[i(`<h1 id="在服务器上搭建-git" tabindex="-1">在服务器上搭建 Git <a class="header-anchor" href="#在服务器上搭建-git" aria-label="Permalink to “在服务器上搭建 Git”">​</a></h1><p><a href="https://backlog.com/git-tutorial/cn/" target="_blank" rel="noreferrer">学习</a></p><h3 id="系统-centos-6-8" tabindex="-1">系统 centos 6.8 <a class="header-anchor" href="#系统-centos-6-8" aria-label="Permalink to “系统 centos 6.8”">​</a></h3><ul><li>安装GIT</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>$ yum install git</span></span></code></pre></div><ul><li>创建一个git用户</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span># 创建一个git用户来运行git服务</span></span>
+<span class="line"><span>$ adduser git</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 禁用shell登录</span></span>
+<span class="line"><span>$ vim /etc/passwd</span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span>git:x:502:502::/home/git:/bin/bash</span></span>
+<span class="line"><span>改成</span></span>
+<span class="line"><span>git:x:502:502::/home/git:/usr/bin/git-shell</span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 设置git用户的密码</span></span>
+<span class="line"><span>$ passwd git</span></span>
+<span class="line"><span>---------------</span></span>
+<span class="line"><span># 或者去除git密码</span></span>
+<span class="line"><span>$ vim /etc/shadow</span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span>git:!!:17149:0:99999:7:::</span></span>
+<span class="line"><span>改成</span></span>
+<span class="line"><span>git::17149:0:99999:7:::</span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 允许空密码登陆</span></span>
+<span class="line"><span>$ vim /etc/ssh/sshd_config</span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span>#PermitEmptyPasswords no</span></span>
+<span class="line"><span>改成</span></span>
+<span class="line"><span>PermitEmptyPasswords yes</span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>$ service sshd restart</span></span></code></pre></div><ul><li>初始化Git仓库</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span># 选择仓库目录, (/home/git)看上面</span></span>
+<span class="line"><span>$ cd /home/git</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 创建一个空仓库</span></span>
+<span class="line"><span>[root@localhost git]# sudo git init --bare test.git</span></span>
+<span class="line"><span>[root@localhost git]# chown -R git:git test.git/</span></span></code></pre></div><ul><li>克隆</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span># 输入你的密码, 就是git设置的密码</span></span>
+<span class="line"><span># 没有设置密码, 看创建git用户部分</span></span>
+<span class="line"><span>[root@localhost git]# git clone git@192.168.1.211:/home/git/test.git</span></span>
+<span class="line"><span>Initialized empty Git repository in /usr/local/nginx/html/git/test/.git/</span></span>
+<span class="line"><span>The authenticity of host &#39;192.168.1.211 (192.168.1.211)&#39; can&#39;t be established.</span></span>
+<span class="line"><span>RSA key fingerprint is 5e:4f:65:d4:e3:3f:42:e5:30:a3:9f:57:d5:c9:ba:bc.</span></span>
+<span class="line"><span>Are you sure you want to continue connecting (yes/no)? yes</span></span>
+<span class="line"><span>Warning: Permanently added &#39;192.168.1.211&#39; (RSA) to the list of known hosts.</span></span>
+<span class="line"><span>git@192.168.1.211&#39;s password:</span></span>
+<span class="line"><span>remote: Counting objects: 3, done.</span></span>
+<span class="line"><span>Receiving objects: 100% (3/3), 200 bytes, done.</span></span>
+<span class="line"><span>remote: Total 3 (delta 0), reused 0 (delta 0)</span></span>
+<span class="line"><span>[root@localhost git]# ll</span></span>
+<span class="line"><span>总用量 8</span></span>
+<span class="line"><span>drwxr-xr-x 6 nginx nginx 4096 12月 14 02:32 mdwiki</span></span>
+<span class="line"><span>drwxr-xr-x 3 root  root  4096 12月 14 10:52 test</span></span></code></pre></div><ul><li>去除密码</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span># 每次操作都要密码, 所有要使用公钥</span></span>
+<span class="line"><span>[root@localhost git]#  cd test</span></span>
+<span class="line"><span>[root@localhost test]# ll</span></span>
+<span class="line"><span>总用量 4</span></span>
+<span class="line"><span>-rw-r--r-- 1 root root 2 12月 14 10:52 a.txt</span></span>
+<span class="line"><span>[root@localhost test]# git pull</span></span>
+<span class="line"><span>git@192.168.1.211&#39;s password:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 把所有公钥导入到/home/git/.ssh/authorized_keys文件里</span></span>
+<span class="line"><span># 这里有坑, /home/git/ 为什么是这个目录</span></span>
+<span class="line"><span># 因为我仓库目录就是 /home/git, 如果不是改成你的仓库目录</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[root@localhost .ssh]# cat /home/git/.ssh/authorized_keys</span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMWE5mI3HS7XGL9FHcFtwqp4llxbtmCvMgg1S/e9MgErwLNQNGhEpBmh6GZhLxqNkkYLD0i/C4BYGuXHZjIkOccVyD5p5XfhUTvNw/44AD9NDbKKpLJBfknuFjv7FZ3GmbVmhC5jStdUnTylz77cfxL0Da91aTcogWGce83r1v7Gm1ulQIJhizOQ2IBazCcbw8BMnTbAoQVkiNENt8hG9iIQnXxWjNaCwCertVPwxT279GQm8TtJJIKcyaBojek6IiCqZPpbcXcGpjdPXbv/TSAQJgqcXq1js6Y3ULfrjJyP8Ds3zvW1uOjnxTMD89rzxYISrfJ/3qNENBvRGMNXlZ jianglin@pp.cc</span></span>
+<span class="line"><span>ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAryqI7zMAvPTydr3ck6u4GiwolQi4GaU9dUXu8VsylaU9cmdVAYUzWchXymMvpgIzQSHrZHTgUS4CaOax6XiBEoIujeR8cqIhds2dtrhoMsNwxb/xxcy0aPpcBHggWT+InGXgLv1T/17zZg7xZQUOn6QTdk7dIh22N0e+lB4mnI/V7+NqiUH0LKIYKIvbBxTpfabI07ij5WE4VSQkKzOFowlAS1kXs3hWqq+4FHL+E6FtCHiNvKRycz0knozjqqznf/9eJNpjvXRb7Y2sbUhyE5Eyp+k1igxeBJRYtoXf4bEWT5QXMTf2yMOC9h7XGkl5yv+djok6Ssm+eicV3gNygw== 8257796@qq.com</span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#</span></span></code></pre></div>`,13)])])}const k=n(l,[["render",e]]);export{d as __pageData,k as default};
