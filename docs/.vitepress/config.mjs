@@ -37,7 +37,6 @@ export default defineConfig({
         ['branch', '分支管理'],
         ['commit', '提交规范'],
         ['command', '常用命令'],
-        ['question', '常见问题'],
       ]),
       section('PHP', '/guide/php/', [
         ['', '安装配置'],

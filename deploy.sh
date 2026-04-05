@@ -16,6 +16,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:linjiangl/nodes.git master:gh-pages
+git push -f git@github.com:linjiangl/nodes.git HEAD:gh-pages
 
 cd -
