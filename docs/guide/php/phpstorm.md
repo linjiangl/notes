@@ -84,5 +84,5 @@ Windows: double click to execute "scripts\install-current-user.vbs" (For current
 
 复制Key粘贴到 `Activation Code`, 点击 `Activate` 激活
 
-![jetbra](/notes/img/jetbra-copy.png)
-![jetbra](/notes/img/jetbra-code.png)
+![jetbra](/img/jetbra-copy.png)
+![jetbra](/img/jetbra-code.png)

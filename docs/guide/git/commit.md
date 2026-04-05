@@ -1,51 +1,118 @@
 # 提交规范
 
-每次提交，Commit message 都包括三个部分：Header，Body 和 Footer。
+推荐使用 Conventional Commits 风格编写提交信息。
 
-```shell
+基础格式如下：
+
+```text
 <type>(<scope>): <subject>
-// 空一行
-<body>
-// 空一行
-<footer>
 ```
 
-其中，Header 是必需的，Body 和 Footer 可以省略。
+- `Header`：必填
+- `Body`：可选
+- `Footer`：可选
 
-> Header
+## Header
 
-Header部分只有一行，包括三个字段：type（必需）、scope（可选）和subject（必需）。
+`Header` 只有一行，包含 `type`、`scope` 和 `subject` 三部分。
 
-1. type
+- `type`：必填
+- `scope`：可选
+- `subject`：必填
 
-`type` 用于说明 commit 的类别，只允许使用下面7个标识。
+例如：
 
-* feat：新功能（feature）
-* fix：修补bug
-* docs：文档（documentation）
-* style： 样式（不影响代码运行的变动）
-* refactor：重构（即不是新增功能，也不是修改bug的代码变动）
-* test：增加测试
-* chore：构建过程或辅助工具的变动
+```text
+feat(auth): add login by sms
+fix(api): handle empty response
+docs(git): update commit guide
+```
 
-如果type为feat和fix，则该 commit 将肯定出现在 Change log 之中。其他情况（docs、chore、style、refactor、test）由你决定，要不要放入 Change log，建议是不要。
+### type
 
-2. scope
+`type` 用于说明本次提交的类别，常用值如下：
 
-`scope` 用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。
+- `feat`：新功能
+- `fix`：修复 bug
+- `docs`：文档变更
+- `style`：代码格式调整，不影响运行结果
+- `refactor`：重构，既不是新功能也不是修复 bug
+- `test`：测试相关变更
+- `chore`：构建、依赖、脚手架或辅助工具变更
 
-3. subject
+一般来说，`feat` 和 `fix` 更适合进入 Change log；其他类型是否进入可按项目需要决定。
 
-`subject` 是 commit 目的的简短描述，不超过50个字符。
+### scope
 
-* 以动词开头，使用第一人称现在时，比如change，而不是changed或changes
-* 第一个字母小写
-* 结尾不加句号（.）
+`scope` 用于说明影响范围，比如模块名、页面名或功能名。
+
+建议：
+
+- 尽量简短，能看出改动范围即可
+- 优先使用模块名、目录名、页面名、功能名
+- 如果这次提交影响范围很散，也可以省略
+
+示例：
+
+- `auth`
+- `api`
+- `git`
+- `docs`
+
+### subject
+
+`subject` 是对本次提交目的的简短描述，建议控制在 50 个字符以内。
+
+- 使用动词开头，直接描述本次提交做了什么
+- 建议使用小写开头
+- 结尾不要加句号
+- 尽量写清“目的”，不要只写“修改代码”“更新内容”这类空话
+
+示例：
+
+```text
+feat(user): add profile page
+fix(order): prevent duplicate submit
+docs(git): update commit guide
+```
+
+## Body
+
+`Body` 用于补充说明提交背景、实现思路或影响范围。
+
+- 说明为什么要改
+- 说明主要改了什么
+- 必要时补充兼容性或注意事项
+
+如果 `Header` 已经足够清楚，`Body` 可以不写。
+
+## Footer
+
+`Footer` 通常用于补充额外信息，例如：
+
+- 关联 issue：`Closes #12`
+- 标记不兼容变更：`BREAKING CHANGE: ...`
+
+## 完整示例
+
+```text
+feat(auth): add sms login
+
+support login by verification code on mobile
+
+Closes #12
+```
+
+## 建议
+
+- 一次提交只表达一件事
+- `subject` 优先写“为什么改”或“改完达到什么结果”
+- 不要把过多实现细节都塞进 `subject`
+- 如果团队已经接入 `commitlint`，以团队规则为准
 
 
-参考资料
+## 参考资料
 
 [文档](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 
 [commitlint](https://commitlint.js.org/)
-

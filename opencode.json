@@ -1,0 +1,21 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "new-api": {
+      "npm": "@ai-sdk/openai",
+      "options": {
+        "name": "new-api",
+        "baseURL": "https://xiaohong.ccwu.cc/v1",
+        "apiKey": "sk-ic9woYsST2EtpvpXYfPlwvCK9KSwt2TKDcg38lRGup29gbXL"
+      },
+      "models": {
+        "gpt-5.3-codex": {
+          "name": "gpt-5.3-codex"
+        },
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}

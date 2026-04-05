@@ -4,7 +4,7 @@
 
 - [EditorConfig for VS Code](https://editorconfig.org/), 配置文件`.editorconfig`：
 
-```editorconfig
+```ini
 # http://editorconfig.org
 root = true
 
@@ -81,4 +81,3 @@ bracketSpacing: true
   // 设置默认终端
   "terminal.integrated.defaultProfile.windows": "Git Bash"
 }
-
