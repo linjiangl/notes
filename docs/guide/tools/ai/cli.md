@@ -7,10 +7,10 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "provider": {
-    "openai-compatible": {
+    "sub2api-openai": {
       "npm": "@ai-sdk/openai",
       "options": {
-        "name": "new-api",
+        "name": "sub2api",
         "baseURL": "https://xxx.com/v1",
         "apiKey": "sk-xxx"
       },
@@ -20,6 +20,66 @@
         },
         "gpt-5.4": {
           "name": "gpt-5.4"
+        },
+        "gpt-5.5": {
+          "name": "gpt-5.5"
+        }
+      }
+    },
+    "sub2api-antigravity": {
+      "npm": "@ai-sdk/google",
+      "options": {
+        "baseURL": "https://xxx.com/antigravity/v1beta",
+        "apiKey": "sk-xxxx"
+      },
+      "models": {
+        "gemini-2.5-flash": {
+          "name": "gemini-2.5-flash"
+        },
+        "gemini-2.5-pro": {
+          "name": "gemini-2.5-pro"
+        },
+        "gemini-3-flash": {
+          "name": "gemini-3-flash"
+        },
+        "gemini-3-pro": {
+          "name": "gemini-3-pro"
+        },
+        "gemini-3.1-pro-low": {
+          "name": "gemini-3.1-pro-low"
+        },
+        "gemini-3.1-pro-high": {
+          "name": "gemini-3.1-pro-high"
+        },
+        "claude-sonnet-4-6": {
+          "name": "claude-sonnet-4-6"
+        },
+        "claude-opus-4-7": {
+          "name": "claude-opus-4-7"
+        }
+      }
+    },
+    "sub2api-gemini": {
+      "npm": "@ai-sdk/google",
+      "options": {
+        "baseURL": "https://xxx.com/v1beta",
+        "apiKey": "sk-xxx"
+      },
+      "models": {
+        "gemini-2.5-flash": {
+          "name": "gemini-2.5-flash"
+        },
+        "gemini-2.5-pro": {
+          "name": "gemini-2.5-pro"
+        },
+        "gemini-3-flash-preview": {
+          "name": "gemini-3-flash"
+        },
+        "gemini-3-pro-preview": {
+          "name": "gemini-3-pro-preview"
+        },
+        "gemini-3.1-pro-preview": {
+          "name": "gemini-3.1-pro-preview"
         }
       }
     }
