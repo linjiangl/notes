@@ -15,14 +15,16 @@
         "apiKey": "sk-xxx"
       },
       "models": {
-        "gpt-5.3-codex": {
-          "name": "gpt-5.3-codex"
-        },
-        "gpt-5.4": {
-          "name": "gpt-5.4"
-        },
         "gpt-5.5": {
-          "name": "gpt-5.5"
+          "name": "gpt-5.5",
+          "reasoning": true,
+          "tool_call": true,
+          "variants": {
+            "low": { "reasoningEffort": "low" },
+            "medium": { "reasoningEffort": "medium" },
+            "high": { "reasoningEffort": "high" },
+            "xigh": { "reasoningEffort": "xhigh" }
+          }
         }
       }
     },
