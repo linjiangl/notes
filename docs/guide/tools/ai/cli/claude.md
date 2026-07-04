@@ -38,12 +38,14 @@ $ npx ctx7 setup --claude
 
 ```
 $ /plugin marketplace add forrestchang/andrej-karpathy-skills
+$ /plugin install andrej-karpathy-skills@karpathy-skills
 ```
 
 > [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)
 
 ```
 $ /plugin marketplace add DietrichGebert/ponytail
+$ /plugin install ponytail@ponytail
 ```
 
 

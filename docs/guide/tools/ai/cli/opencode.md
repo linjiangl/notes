@@ -69,6 +69,11 @@ OpenCode 是开源的 AI 编程 CLI（opencode.ai），终端内运行，支持�
 $ npx ctx7 setup --opencode
 ```
 
+```
+$ cd ~/.claude/plugins/cache/karpathy-skills/andrej-karpathy-skills/1.0.0/skills
+$ cp -r karpathy-guidelines ~/.opencode/skills
+```
+
 > [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)
 
 Add to `opencode.json`:

@@ -114,7 +114,10 @@ $ npx ctx7 setup --codex
 
 > [karpathy-guidelines](https://github.com/multica-ai/andrej-karpathy-skills)
 
-手动处理
+```
+$ cd ~/.claude/plugins/cache/karpathy-skills/andrej-karpathy-skills/1.0.0/skills
+$ cp -r karpathy-guidelines ~/.codex/skills
+```
 
 > [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)
 
