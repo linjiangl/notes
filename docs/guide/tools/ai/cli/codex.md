@@ -2,6 +2,12 @@
 
 Codex CLI 是 OpenAI 官方的 AI 编程 CLI，本地运行在终端中。本文记录配置与常用设置。
 
+## 安装
+
+```
+$ npm install -g @openai/codex
+```
+
 ## 配置
 
 配置文件位于 `~/.codex/`：`auth.json` 存放认证信息，`config.toml` 存放模型、审批策略等设置。可直接编辑文件，或用 `codex` 交互修改。

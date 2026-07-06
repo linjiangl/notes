@@ -2,6 +2,12 @@
 
 OpenCode 是开源的 AI 编程 CLI（opencode.ai），终端内运行，支持自定义模型 Provider。本文记录配置与常用设置。
 
+## 安装
+
+```
+$ npm install -g opencode-ai
+```
+
 ## 配置
 
 配置文件为 `opencode.json`（项目根目录或全局），Schema 见 `https://opencode.ai/config.json`。可直接编辑文件，或在 TUI 中修改。
@@ -78,8 +84,10 @@ $ cp -r karpathy-guidelines ~/.opencode/skills
 
 Add to `opencode.json`:
 
-```
-{ "plugin": ["@dietrichgebert/ponytail"] }
+```jsonc
+{ 
+  "plugin": ["@dietrichgebert/ponytail"] 
+}
 ```
 
 

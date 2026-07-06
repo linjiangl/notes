@@ -2,11 +2,25 @@
 
 Claude Code 是 Anthropic 官方的 AI 编程 CLI。本文记录配置、常用 MCP 和 Skill。
 
+## 安装
+
+```
+$ npm install -g @anthropic-ai/claude-code
+```
+
+
 ## 配置
 
 配置文件按优先级合并：`~/.claude/settings.json`（用户级）→ `.claude/settings.json`（项目共享）→ `.claude/settings.local.json`（本地）。`/config` 可交互修改。
 
 ```jsonc
+# ~/.claude.json
+
+{
+  "hasCompletedOnboarding": true
+}
+
+
 # ~/.claude/settings.json
 
 {
